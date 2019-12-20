@@ -24,6 +24,7 @@
 		D3539A7D23AA9BB800F721C9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3539A7C23AA9BB800F721C9 /* ViewModel.swift */; };
 		D3539A7F23AA9BE600F721C9 /* Ramen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3539A7E23AA9BE600F721C9 /* Ramen.swift */; };
 		D369437A23ABA78F00312B35 /* RamenClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D369437923ABA78F00312B35 /* RamenClassification.mlmodel */; };
+		D3AC161E23ABCDE0005FAEB7 /* MLClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC161D23ABCDE0005FAEB7 /* MLClassifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D3539A7C23AA9BB800F721C9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D3539A7E23AA9BE600F721C9 /* Ramen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramen.swift; sourceTree = "<group>"; };
 		D369437923ABA78F00312B35 /* RamenClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RamenClassification.mlmodel; sourceTree = "<group>"; };
+		D3AC161D23ABCDE0005FAEB7 /* MLClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLClassifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,19 +120,8 @@
 		D3412AF523AA1969008B3A91 /* MVVMSample */ = {
 			isa = PBXGroup;
 			children = (
-				D369437923ABA78F00312B35 /* RamenClassification.mlmodel */,
-				D3412B0423AA196C008B3A91 /* Info.plist */,
-				D3412AF623AA1969008B3A91 /* AppDelegate.swift */,
-				D3412B3423AA2027008B3A91 /* CameraViewController.swift */,
-				D3099ED223ABBF3300FA410A /* HTTPClient.swift */,
-				D3099ED023ABBEDB00FA410A /* Model.swift */,
-				D3539A7E23AA9BE600F721C9 /* Ramen.swift */,
-				D3412AF823AA1969008B3A91 /* SceneDelegate.swift */,
-				D3412AFA23AA1969008B3A91 /* ViewController.swift */,
-				D3539A7C23AA9BB800F721C9 /* ViewModel.swift */,
-				D3412AFF23AA196C008B3A91 /* Assets.xcassets */,
-				D3412B0123AA196C008B3A91 /* LaunchScreen.storyboard */,
-				D3412AFC23AA1969008B3A91 /* Main.storyboard */,
+				D3AC162023AD2464005FAEB7 /* Resource */,
+				D3D502CA23AD256B006CCCF6 /* Source */,
 			);
 			path = MVVMSample;
 			sourceTree = "<group>";
@@ -158,6 +149,34 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3AC162023AD2464005FAEB7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D369437923ABA78F00312B35 /* RamenClassification.mlmodel */,
+				D3412B0423AA196C008B3A91 /* Info.plist */,
+				D3412AFF23AA196C008B3A91 /* Assets.xcassets */,
+				D3412B0123AA196C008B3A91 /* LaunchScreen.storyboard */,
+				D3412AFC23AA1969008B3A91 /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D3D502CA23AD256B006CCCF6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D3412AF623AA1969008B3A91 /* AppDelegate.swift */,
+				D3412B3423AA2027008B3A91 /* CameraViewController.swift */,
+				D3099ED223ABBF3300FA410A /* HTTPClient.swift */,
+				D3AC161D23ABCDE0005FAEB7 /* MLClassifier.swift */,
+				D3099ED023ABBEDB00FA410A /* Model.swift */,
+				D3539A7E23AA9BE600F721C9 /* Ramen.swift */,
+				D3412AF823AA1969008B3A91 /* SceneDelegate.swift */,
+				D3412AFA23AA1969008B3A91 /* ViewController.swift */,
+				D3539A7C23AA9BB800F721C9 /* ViewModel.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AC161E23ABCDE0005FAEB7 /* MLClassifier.swift in Sources */,
 				D3539A7D23AA9BB800F721C9 /* ViewModel.swift in Sources */,
 				D3412AFB23AA1969008B3A91 /* ViewController.swift in Sources */,
 				D3412B3523AA2027008B3A91 /* CameraViewController.swift in Sources */,
@@ -484,8 +504,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ5MY38H84;
-				INFOPLIST_FILE = MVVMSample/Info.plist;
+				DEVELOPMENT_TEAM = 2X6AD4W323;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMSample/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,15 +522,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ5MY38H84;
-				INFOPLIST_FILE = MVVMSample/Info.plist;
+				DEVELOPMENT_TEAM = 2X6AD4W323;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMSample/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fumiya.MVVMSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
